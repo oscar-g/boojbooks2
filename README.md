@@ -5,5 +5,6 @@ A junior programmer has been tasked with creating a reading list app with basic 
 
 Additionally, the programmer has not written any tests for their code! **Please write some tests for this project, covering the backend and frontend.**
 
+Please create a Fork of the repository
 
 This code test should not take longer than 4 hours.

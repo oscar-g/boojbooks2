@@ -16,12 +16,14 @@
                 <div class="card-body">
                     <form method="post">
                         @csrf
+                        <!-- @todo front-end validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" class="form-control" id="name" placeholder="Author Name">
                         </div>
                         <div class="form-group">
                             <label for="birthday">Birthday</label>
+                            <!-- @todo use "date" input type -->
                             <input name="birthday" type="text" class="form-control" id="birthday" placeholder="YYYY-MM-DD Format">
                         </div>
                         <div class="form-group">
@@ -35,6 +37,7 @@
 
             <hr />
 
+            <!-- @todo when $authors is empty, consider removing this card or showing a friendly message -->
             <div class="card">
                 <div class="card-header">Author List</div>
 

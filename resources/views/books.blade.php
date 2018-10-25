@@ -16,6 +16,7 @@
                 <div class="card-body">
                     <form method="post">
                         @csrf
+                        <!-- @todo front-end validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input name="title" type="text" class="form-control" id="title" placeholder="Book Title">
@@ -29,6 +30,7 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <!-- @todo use "date" input type -->
                             <label for="publication_date">Publication Date</label>
                             <input name="publication_date" type="text" class="form-control" id="publication_date" placeholder="YYYY-MM-DD Format">
                         </div>
@@ -37,6 +39,7 @@
                             <textarea name="description"class="form-control" id="description" rows="3"></textarea>
                         </div>
                         <div class="form-group">
+                            <!-- @todo use "number" input type -->
                             <label for="pages">Page Count</label>
                             <input name="pages" type="text" class="form-control" id="pages" placeholder="Enter a number only">
                         </div>
@@ -47,6 +50,7 @@
 
             <hr />
 
+            <!-- @todo when $books is empty, consider removing this card or showing a friendly message -->
             <div class="card">
                 <div class="card-header">Book List</div>
 

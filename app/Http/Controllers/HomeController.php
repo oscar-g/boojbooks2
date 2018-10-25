@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 use App\Author;
 use App\Book;
 
+/**
+ * @todo Consider splitting up into AuthorsController and BooksController
+ * @todo Consider moving db operations into AuthorService and BookService
+ */
 class HomeController extends Controller
 {
     /**
@@ -35,6 +39,10 @@ class HomeController extends Controller
 
         return view('authors', compact('authors'));
     }
+
+    /**
+     * @todo validate input with \App\Http\Requests\AddAuthorRequest
+     */
     public function addAuthor()
     {
         $author = new Author;
@@ -46,10 +54,21 @@ class HomeController extends Controller
         session()->flash('status', 'Author Added!');
         return redirect('authors');
     }
+
+    /**
+     * @todo consider anotating the type of $author_id
+     * @todo check if author exists, before attempting delete
+     */
     public function deleteAuthor($author_id)
     {
+        /**
+         * @todo use \App\Author model for db operations
+         */
         DB::table('authors')->where('id', $author_id)->delete();
 
+        /**
+         * @todo flash error message when model does not exist
+         */
         session()->flash('status', 'Author Deleted!');
         return redirect('authors');
     }
@@ -60,6 +79,10 @@ class HomeController extends Controller
 
         return view('books', compact('books'));
     }
+
+    /**
+     * @todo validate input with \App\Http\Requests\AddBookRequest
+     */
     public function addBook()
     {
         $book = new Book;
@@ -73,10 +96,21 @@ class HomeController extends Controller
         session()->flash('status', 'Book Added!');
         return redirect('books');
     }
+
+    /**
+     * @todo consider anotating the type of $book_id
+     * @todo chceck if book exists, before attempting delete
+     */
     public function deleteBook($book_id)
     {
+        /**
+         * @todo use \App\Book model for db operations
+         */
         DB::table('books')->where('id', $book_id)->delete();
 
+        /**
+         * @todo flash error message when model does not exist
+         */
         session()->flash('status', 'Book Deleted!');
         return redirect('books');
     }

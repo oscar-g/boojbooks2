@@ -21,8 +21,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/authors', 'HomeController@authors')->name('authors');
 Route::post('/authors', 'HomeController@addAuthor');
+
+/**
+ * @todo add parameter constraint where('id', '[0-9]+')
+ */
 Route::get('/authors/delete/{id}', 'HomeController@deleteAuthor');
 
 Route::get('/books', 'HomeController@books')->name('books');
 Route::post('/books', 'HomeController@addBook');
+
+/**
+ * @todo add parameter constraint where('id', '[0-9]+')
+ */
 Route::get('/books/delete/{id}', 'HomeController@deleteBook');

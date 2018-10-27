@@ -10,6 +10,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- @todo consider managing depenedncies (jquery, bootstrap, datatables) with NPM -->
+    <!-- @todo consider compiling assets with Laravel Mix -->
+
     <!-- Javascript -->
     <script src="/js/jquery-3.3.1.js"></script>
     <!-- @todo Add bootstrap.js for navbar and dropdown functionality -->

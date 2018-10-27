@@ -14,9 +14,10 @@
                 <div class="card-header">Add Book</div>
 
                 <div class="card-body">
+                    <!-- @todo front-end validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
+                    <!-- @todo show backend validation error messages, if available -->
                     <form method="post">
                         @csrf
-                        <!-- @todo front-end validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input name="title" type="text" class="form-control" id="title" placeholder="Book Title">

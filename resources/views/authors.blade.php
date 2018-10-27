@@ -14,9 +14,10 @@
                 <div class="card-header">Add Author</div>
 
                 <div class="card-body">
+                    <!-- @todo frontend validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
+                    <!-- @todo show backend validation error messages, if available -->
                     <form method="post">
                         @csrf
-                        <!-- @todo front-end validation (https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation) -->
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" class="form-control" id="name" placeholder="Author Name">

@@ -12,6 +12,7 @@
 
     <!-- Javascript -->
     <script src="/js/jquery-3.3.1.js"></script>
+    <!-- @todo Add bootstrap.js for navbar and dropdown functionality -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">

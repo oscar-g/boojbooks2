@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * @todo foreign key (books.author_id references authors.id)
+ */
 class CreateAuthorsTable extends Migration
 {
     /**
